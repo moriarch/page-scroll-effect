@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main{
+  @apply lg:absolute left-0 top-0 w-full h-full overflow-hidden z-10 bg-slate-400
+}
+section{
+  @apply min-h-screen bg-white relative overflow-auto w-full h-full transition-all duration-500
+}
+#controllers{
+  @apply fixed left-0 top-1/2 -translate-y-1/2 ml-5 z-30 hidden lg:block
+}
+#controllers div{
+  @apply rounded-full w-5 h-5 flex items-center justify-center border border-transparent duration-150 transition-all my-4 cursor-pointer
+}
+#controllers div:after{
+  content: " ";
+  @apply block rounded-full w-3 h-3 bg-red-700 my-5 
+}
+#controllers div.active {
+  @apply border-red-700 
+}
